@@ -1,0 +1,92 @@
+{
+    "factsheet": {
+        "developer": "BitCake Studio",
+        "location": "Based in Rio de Janeiro, Brazil",
+        "founded": "June 14th, 2013",
+        "website": "https://bitcake.studio",
+        "contact": "contact@bitcake.studio",
+        "social": {
+            "twitter": "https://twitter.com/bitcakestudio",
+            "facebook": "https://facebook.com/bitcakestudio",
+            "instagram": "https://instagram.com/bitcakestudio"
+        }
+    },
+    "about": "studio.md",
+    "header": "img/header.jpg",
+    "logo": "img/logo.jpg",
+    "projects": [
+        {
+            "name": "DeMagnete VR",
+            "id": "demagnete",
+            "data": "projects/demagnete/demagnete.json"
+        },
+        {
+            "name": "Holodrive",
+            "id": "holodrive",
+            "data": "projects/holodrive/holodrive.json"
+        }
+    ],
+    "videos": [
+        {
+            "title": "BitCake Studio - Demo Reel",
+            "url": "https://youtu.be/pp-F6o_UWWk",
+            "youtubeId": "pp-F6o_UWWk"
+        },
+        {
+            "title": "BitCake Studio - Demo Reel",
+            "url": "https://youtu.be/pp-F6o_UWWk",
+            "youtubeId": "pp-F6o_UWWk"
+        },
+        {
+            "title": "BitCake Studio - Demo Reel",
+            "url": "https://youtu.be/pp-F6o_UWWk",
+            "youtubeId": "pp-F6o_UWWk"
+        }
+    ],
+    "images": [
+        "img/About_BitCake.png",
+        "img/About_BitCake.png",
+        "img/About_BitCake.png",
+        "img/About_BitCake.png"
+    ],
+    "icons": [
+        "img/logos/bitcake--logo--orange--512x512.png",
+        "img/logos/bitcake--logo--purple--512x512.png",
+        "img/logos/bitcake--logo--teal--512x512.png",
+        "img/logos/bitcake-logo-teal-gradient--banner--900px.jpg",
+        "img/logos/bitcake-logo-teal-gradient--banner--1600px.jpg"
+    ],
+    "awards": [
+        {
+            "name": "BIG Finalist 2021",
+            "title": "DeMagnete",
+            "image": "path"
+        }
+    ],
+    "articles": [
+        {
+            "title": "Tokimeki Memorial Review",
+            "outlet": "Kotaku",
+            "author": "Tim Rogers",
+            "url": "https://kotaku.com"
+        }
+    ],
+    "links": [
+        {
+            "title": "BitStrap",
+            "description": "Open source unity utility package available [here](https://bitcakestudio.com)"
+        }
+    ],
+    "team": [
+        {
+            "name": "Camilla Slotfeldt",
+            "description": "[CEO](https://millaslotfeldt.com)"
+        }
+    ],
+    "contact": [
+        {
+            "title": "Business Inquiries",
+            "description": "[contact@bitcake.studio](mailto:contact@bitcake.studio)"
+        }
+    ]
+}

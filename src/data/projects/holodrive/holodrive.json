@@ -1,0 +1,79 @@
+{
+    "factsheet": {
+        "developer": "BitCake Studio",
+        "location": "Based in Rio de Janeiro, Brazil",
+        "release": "May 18th, 2021",
+        "website": "https://holodrivegame.com",
+        "price": "Free",
+        "platforms": "PC, Browser",
+        "social": {
+            "twitter": "https://twitter.com/bitcakestudio",
+            "facebook": "https://facebook.com/bitcakestudio",
+            "instagram": "https://instagram.com/bitcakestudio"
+        }
+    },
+    "about": "holodrive.md",
+    "header": "img/header.jpg",
+    "videos": [
+        {
+            "title": "BitCake Studio - Demo Reel",
+            "url": "https://youtu.be/pp-F6o_UWWk",
+            "youtubeId": "pp-F6o_UWWk"
+        },
+        {
+            "title": "BitCake Studio - Demo Reel",
+            "url": "https://youtu.be/pp-F6o_UWWk",
+            "youtubeId": "pp-F6o_UWWk"
+        },
+        {
+            "title": "BitCake Studio - Demo Reel",
+            "url": "https://youtu.be/pp-F6o_UWWk",
+            "youtubeId": "pp-F6o_UWWk"
+        }
+    ],
+    "images": [
+        "img/About_BitCake.png",
+        "img/About_BitCake.png",
+        "img/About_BitCake.png",
+        "img/About_BitCake.png"
+    ],
+    "icons": [
+        "image-path",
+        "image-path",
+        "image-path",
+        "image-path"
+    ],
+    "awards": [
+        {
+            "name": "BIG Finalist 2021",
+            "title": "DeMagnete",
+            "image": "path"
+        }
+    ],
+    "articles": [
+        {
+            "title": "Tokimeki Memorial Review",
+            "outlet": "Kotaku",
+            "author": "Tim Rogers",
+            "url": "https://kotaku.com"
+        }
+    ],
+    "links": [
+        {
+            "title": "BitStrap",
+            "description": "Open source unity utility package available [here](https://bitcakestudio.com)"
+        }
+    ],
+    "credits": [
+        {
+            "name": "Camilla Slotfeldt",
+            "description": "[CEO](https://millaslotfeldt.com)"
+        }
+    ],
+    "contact": [
+        {
+            "title": "Business Inquiries",
+            "description": "[contact@bitcake.studio](mailto:contact@bitcake.studio)"
+        }
+    ]
+}

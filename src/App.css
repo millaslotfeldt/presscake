@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -24,9 +25,122 @@
   color: white;
 }
 
+.header {
+  /* background: url('./img/header.jpg'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1em;
+}
+
+.logo {
+  /* background: url('./img/logo.jpg'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  min-height: 8em;
+  display: block;
+  padding: 0;
+}
+
 .App-link {
   color: #61dafb;
 }
+
+.main {
+  margin-top: 2em;
+}
+
+.content {
+  /* padding-left: 2em; */
+}
+
+.menu li {
+  list-style: none;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+.menu li button {
+  width: 100%;
+  text-align: left;
+}
+
+.menu {
+  width: 100%;
+  padding: 0;
+  margin-top: 0.5em;
+}
+
+.main h3 {
+  padding-top: 1.2em;
+  font-size: 1.5em;
+}
+
+.main h1 {
+  font-size: 2em;
+}
+
+.projects li {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+.projects ul {
+  padding: 0;
+}
+
+.factsheet p {
+  font-size: 0.9em;
+  padding-bottom:0.2em;
+  margin:0;
+}
+
+.content h1 {
+  padding-top: 0.6em;
+  margin-top: 0;
+}
+
+.factsheet h3 {
+
+}
+
+.factsheet h6 {
+  margin-top: 0.4em;
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.video {
+  margin-bottom: 1em;
+}
+
+.images {
+  padding: 0;
+}
+
+.images img {
+  width: 50%;
+  height: auto;
+}
+
+.icons img {
+  width: 50%;
+  height: auto;
+}
+
+.left {
+  padding-right: 0.25em;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+}
+
+.right {
+  padding-left: 0.25em;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+}
+
 
 @keyframes App-logo-spin {
   from {
