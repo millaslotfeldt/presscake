@@ -41,10 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "copy-webpack-plugin": "^8.1.1",
-    "ghpages": "0.0.10",
-    "ncp": "^2.0.0",
-    "react-app-rewired": "^2.1.8"
-  }
+  "devDependencies": {}
 }
