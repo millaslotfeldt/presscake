@@ -9,7 +9,7 @@ import Layout from './components/layout';
 function App() {
 
     return (
-        <div class="main">
+        <div class="main bg-dark">
             <Router>
                 <Switch>
                     <Route exact path="/" component={Layout} />

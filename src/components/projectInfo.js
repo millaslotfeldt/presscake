@@ -21,11 +21,10 @@ const ProjectInfo = (props) => {
 
     return (
         <div class="info">
-            <Header img={props.data.header} />
             <Container>
                 <Row>
                     <Col sm={3}>
-                        <ProjectFactsheet factsheet={props.data.factsheet} /> }
+                        <ProjectFactsheet factsheet={props.data.factsheet} /> 
                     </Col>
                     <Col sm={9}>
                         <About content={props.about} />
@@ -33,7 +32,7 @@ const ProjectInfo = (props) => {
                     </Row>
             </Container>
             <Videos videos={props.data.videos} />
-            <Images images={props.data.images} />
+            <Images images={props.data.images} project={true} />
             <Icons icons={props.data.icons} />
             <Awards awards={props.data.awards} />
             <Articles articles={props.data.articles} />

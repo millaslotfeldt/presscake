@@ -1,11 +1,17 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+
 const Factsheet = (props) => {
 
     return (
         <div id="factsheet" className="factsheet">
-            <h3>Factsheet</h3>
+            <h3 className="text-light">Factsheet</h3>
 
-            <h6>Developer</h6>
-            <p>
+            <h6 className="text-light">Developer</h6>
+            <p className="text-light">
                 <a href={props.factsheet.website} rel="noreferrer" target="_blank">
                     {props.factsheet.developer}
                     
@@ -14,33 +20,36 @@ const Factsheet = (props) => {
                 {props.factsheet.location}
             </p>
 
-            <h6>Founding date</h6>
-            <p>{props.factsheet.founded}</p>
+            <h6 className="text-light">Founding date</h6>
+            <p className="text-light">{props.factsheet.founded}</p>
 
-            <h6>Website</h6>
-            <p>{props.factsheet.website}</p>
+            <h6 className="text-light">Website</h6>
+            <p className="text-light">{props.factsheet.website}</p>
 
-            <h6>Contact</h6>
-            <p>
+            <h6 className="text-light">Contact</h6>
+            <p className="text-light">
                 <a href={"mailto:" + props.factsheet.contact} rel="noreferrer" target="_blank">
                     {props.factsheet.contact}
                 </a>
             </p>
 
-            <h6>Social Media</h6>
+            <h6 className="text-light">Social Media</h6>
             <p>
-                <a href={props.factsheet.twitter} rel="noreferrer" target="_blank">
-                    Twitter
+                <FontAwesomeIcon icon={faTwitter} /> &nbsp;
+                <a href={props.factsheet.social.twitter.url} rel="noreferrer" target="_blank">
+                    @{props.factsheet.social.twitter.handle}
                 </a>
             </p>
             <p>
-                <a href={props.factsheet.facebook} rel="noreferrer" target="_blank">
-                    Facebook
+                <FontAwesomeIcon icon={faFacebook} /> &nbsp;
+                <a href={props.factsheet.social.facebook.url} rel="noreferrer" target="_blank">
+                    {props.factsheet.social.facebook.handle}
                 </a>
             </p>
             <p>
-                <a href={props.factsheet.instagram} rel="noreferrer" target="_blank">
-                    Instagram
+                <FontAwesomeIcon icon={faInstagram} /> &nbsp;
+                <a href={props.factsheet.social.instagram.url} rel="noreferrer" target="_blank">
+                    @{props.factsheet.social.instagram.handle}
                 </a>
             </p>
 

@@ -13,7 +13,8 @@
     },
     "about": "studio.md",
     "header": "img/header.jpg",
-    "logo": "img/logo.jpg",
+    "logo": "img/logo.png",
+    "color": "#a945d8",
     "projects": [
         {
             "name": "DeMagnete VR",

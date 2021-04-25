@@ -7,13 +7,23 @@
         "price": "USD $19.99",
         "platforms": "Oculus Rift, Steam VR, Playstation VR",
         "social": {
-            "twitter": "https://twitter.com/bitcakestudio",
-            "facebook": "https://facebook.com/bitcakestudio",
-            "instagram": "https://instagram.com/bitcakestudio"
+            "twitter": {
+                "handle": "bitcakestudio",
+                "url": "https://twitter.com/bitcakestudio"
+            },
+            "facebook": {
+                "handle": "bitcakestudio",
+                "url": "https://facebook.com/bitcakestudio"
+            },
+            "instagram": {
+                "handle": "bitcakestudio",
+                "url": "https://instagram.com/bitcakestudio"
+            }
         }
     },
     "about": "demagnete.md",
     "header": "img/header.jpg",
+    "color": "#a945d8",
     "videos": [
         {
             "title": "BitCake Studio - Demo Reel",

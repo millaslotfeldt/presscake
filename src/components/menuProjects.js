@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import { propTypes } from "react-bootstrap/esm/Image";
 import { HashLink } from 'react-router-hash-link';
 
-const Menu = (props) => {
+const ProjectsMenu = (props) => {
 
     return (
         <Navbar collapseOnSelect expand="xl" variant="dark">
@@ -21,16 +21,8 @@ const Menu = (props) => {
                         <HashLink to="#about">
                             <Button variant="secondary">About</Button>
                         </HashLink>
-                    </li>   
-                    { 
-                        props.isProjectSelected ?   
-                            null
-                        :   <li>
-                                <HashLink to="#projects">
-                                    <Button variant="secondary">Projects</Button>
-                                </HashLink>
-                            </li>
-                    }       
+                    </li>          
+
                     <li>
                         <HashLink to="#videos">
                             <Button variant="secondary">Videos</Button>
@@ -38,13 +30,7 @@ const Menu = (props) => {
                     </li>
                     <li>
                         <HashLink to="#images">  
-                            <Button variant="secondary">
-                                {
-                                    props.isProjectSelected ?
-                                        "Screenshots & Gifs"
-                                        : "Images"  
-                                }
-                            </Button>
+                            <Button variant="secondary">Screenshots & Gifs</Button>
                         </HashLink>
                     </li>
                     <li>
@@ -85,4 +71,4 @@ const Menu = (props) => {
 };
 
 
-export default Menu;
+export default ProjectsMenu;

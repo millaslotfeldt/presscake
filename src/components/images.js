@@ -8,6 +8,12 @@ function getImageClass(i) {
 
 const Images = (props) => {
 
+    let title = "Images";
+
+    if (props.project == true) {
+        title = "Screenshots & Gifs";
+    }
+
     let images = props.images.map((image, index) =>
         
         <a href={'/data/' + image}>
@@ -22,7 +28,8 @@ const Images = (props) => {
 
     return (
         <div className="images" id="images">
-            <h3>Images</h3>
+            <h2 className="text-light">{title}</h2>
+            <hr></hr>
             {images}
         </div>
     );

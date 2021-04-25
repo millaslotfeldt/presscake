@@ -4,18 +4,19 @@ const Videos = (props) => {
 
     let videos = props.videos.map((video, index) =>
         <div className="video">
+            
+            <YoutubeEmbed youtubeId={video.youtubeId} />
             <a href={video.url}>
                 <h5>{video.title}</h5>
             </a>
-            
-            <YoutubeEmbed youtubeId={video.youtubeId} />
 
         </div>
     );
 
     return (
-        <div class="Contact">
-            <h3>Videos</h3>
+        <div id="videos" class="videos">
+            <h2 className="text-light">Videos</h2>
+            <hr></hr>
             {videos}
         </div>
     );

@@ -7,9 +7,18 @@
         "price": "Free",
         "platforms": "PC, Browser",
         "social": {
-            "twitter": "https://twitter.com/bitcakestudio",
-            "facebook": "https://facebook.com/bitcakestudio",
-            "instagram": "https://instagram.com/bitcakestudio"
+            "twitter": {
+                "handle": "bitcakestudio",
+                "url": "https://twitter.com/bitcakestudio"
+            },
+            "facebook": {
+                "handle": "bitcakestudio",
+                "url": "https://facebook.com/bitcakestudio"
+            },
+            "instagram": {
+                "handle": "bitcakestudio",
+                "url": "https://instagram.com/bitcakestudio"
+            }
         }
     },
     "about": "holodrive.md",
@@ -42,13 +51,6 @@
         "image-path",
         "image-path",
         "image-path"
-    ],
-    "awards": [
-        {
-            "name": "BIG Finalist 2021",
-            "title": "DeMagnete",
-            "image": "path"
-        }
     ],
     "articles": [
         {

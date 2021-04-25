@@ -7,6 +7,11 @@ function getImageClass(i) {
 
 const Icons = (props) => {
 
+    
+    if (props.icons == null) {
+        return null; 
+    }
+
     let icons = props.icons.map((icon, index) =>
         
         <a href={'/data/' + icon}>
@@ -21,7 +26,8 @@ const Icons = (props) => {
 
     return (
         <div id="icons" className="icons">
-            <h3>Logos & Icons</h3>
+            <h2 className="text-light">Logos & Icons</h2>
+            <hr></hr>
             {icons}
         </div>
     );

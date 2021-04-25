@@ -8,6 +8,7 @@ import Menu from './menu';
 import Logo from "./logo";
 import StudioInfo from './studioInfo';
 import ProjectInfo from './projectInfo';
+import Header from './header';
 
 
 const Layout = (props) => {
@@ -15,44 +16,38 @@ const Layout = (props) => {
     const [data, setData] = useState(''); 
     const [about, setAbout] = useState('');
     const [projects, setProjects] = useState('');
-    const [projectsAbout, setProjectsAbout] = useState(''); 
-    //const [selectedProject, setSelectedProject] = useState(null); 
+    const [projectsAbout, setProjectsAbout] = useState('');  
 
     let selectedProject = null; 
+    let isProjectSelected = false; 
+    let headerPath = null;
+    let accentColor = null;
+
+    const dataFolder = process.env.PUBLIC_URL + '/data/'; 
 
     const studioDataPath = "studio.json";
     const studioMarkdownPath = "studio.md";
-
-
-
-    // const getPressKitDatafromUrlParams = async (data) => {
-    //     if (props.match.params.project) {
-    //         for (let i = 0; i < data.projects.length; i++) {
-    //             if (data.projects[i].id == props.match.params.project) {
-    //                 setSelectedProject(i);
-    //             }
-    //         }   
-    //     } 
-    // }; 
 
 
     useEffect(() => {
 
         const getPressKitData = async () => {
 
-            const studioDataResponse = await fetch(process.env.PUBLIC_URL + "/data/" + studioDataPath);
+            const studioDataResponse = await fetch(dataFolder + studioDataPath);
             const studioData = await studioDataResponse.json();
             setData(studioData);
+            console.log(studioData);
     
             const aboutText = await getPressKitMarkdown(studioMarkdownPath);
             setAbout(aboutText);
+            console.log(aboutText);
             
             let projectsData = []; 
             let projectsAboutData = [];
             
             for (let i=0; i < studioData.projects.length; i++) {
                 const projectFolder = "projects/" + studioData.projects[i].id + "/"; 
-                const currentProjectData = await getProjectData(projectFolder + studioData.projects[i].data);
+                const currentProjectData = await getProjectData(studioData.projects[i].data);
                 console.log(studioData.projects[i].data); 
                 await projectsData.push(currentProjectData);
                 
@@ -71,7 +66,8 @@ const Layout = (props) => {
     
     
         const getProjectData = async (dataPath) => {
-            const projectResponse = await fetch(process.env.PUBLIC_URL + "/data/" + dataPath);
+            console.log(dataFolder + dataPath); 
+            const projectResponse = await fetch(dataFolder + dataPath);
             const projectData = await projectResponse.json();
     
             return projectData;
@@ -79,7 +75,7 @@ const Layout = (props) => {
     
     
         const getPressKitMarkdown = async (dataPath) => {
-            const aboutResponse = await fetch(process.env.PUBLIC_URL + "/data/" + dataPath);
+            const aboutResponse = await fetch(dataFolder + dataPath);
             const aboutText = await aboutResponse.text(); 
     
             return aboutText; 
@@ -96,12 +92,21 @@ const Layout = (props) => {
         return null;
     }
 
+    headerPath = process.env.PUBLIC_URL + '/data/' + data.header; 
+
     const selectProject = () => {
+
+        selectedProject = null;
+
         for (let i = 0; i < data.projects.length; i++) {
             if (data.projects[i].id == props.match.params.project) {
                 console.log(props.match.params.project, "matches", data.projects[i].id); 
 
                 selectedProject = i;  
+                const projectFolder = "projects/" + data.projects[i].id + "/"; 
+                headerPath = process.env.PUBLIC_URL + '/data/' + projectFolder + projects[selectedProject].header;
+                accentColor = projects[selectedProject].color;
+                isProjectSelected = true;
             }
         }
         if (selectedProject == null) {
@@ -120,29 +125,25 @@ const Layout = (props) => {
         }  
 
     } else {
-        if (selectedProject != null) {
-            selectedProject = null; 
-        }
+        selectedProject = null;
+        isProjectSelected = false; 
+        headerPath = process.env.PUBLIC_URL + '/data/' + data.header; 
+        accentColor = data.color;
     }
 
     console.log("Selected project", selectedProject);
+    console.log(" HEADER", headerPath); 
 
 
     return (
-        <div class="press-kit">
+        <div className="press-kit">
+            <Header headerSource={headerPath} logoSource={data.logo} accentColor={accentColor} />
+            <Menu isProjectSelected={isProjectSelected} />
             <Container>
                 <Row>
-                    <Col sm={3}>
-                        <Logo img={data.logo} />
-                        <Menu isProjectSelected={selectedProject} />
-                    </Col>
-                    <Col sm={9}>
-                        {
-                            props.match.params.project ?
-                                <ProjectInfo data={projects[selectedProject]} about={projectsAbout[selectedProject]} />
-                            : <StudioInfo data={data} about={about} />
-                        }
-                    </Col>
+                    { isProjectSelected ?
+                            <ProjectInfo data={projects[selectedProject]} about={projectsAbout[selectedProject]} />
+                        : <StudioInfo data={data} about={about} /> }
                 </Row>
             </Container>
         </div>

@@ -21,18 +21,17 @@ const StudioInfo = (props) => {
 
     return (
         <div class="info">
-            <Header img={props.data.header} />
             <Container>
                 <Row>
                     <Col sm={3}>
-                        <Factsheet factsheet={props.data.factsheet} /> }
+                        <Factsheet factsheet={props.data.factsheet} /> 
                     </Col>
                     <Col sm={9}>
                         <Content content={props.about} />
                     </Col>
                     </Row>
             </Container>
-            <Projects projects={props.data.projects} />
+            <Projects projects={props.data.projects} accentColor={props.data.color} />
             <Videos videos={props.data.videos} />
             <Images images={props.data.images} />
             <Icons icons={props.data.icons} />

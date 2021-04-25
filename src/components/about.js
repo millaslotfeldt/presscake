@@ -8,8 +8,8 @@ const About = (props) => {
     const contentMarkdown = marked(props.content, {sanitize: true}); 
 
     return (
-        <div class="content" id="about">
-            <div dangerouslySetInnerHTML={
+        <div className="content" id="about">
+            <div className="text-light" dangerouslySetInnerHTML={
                 {
                     __html: marked(contentMarkdown, { renderer: renderer })
                 }

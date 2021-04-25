@@ -1,22 +1,32 @@
+
+
 import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
 import {Link} from "react-router-dom";
 
 const Projects = (props) => {
+    
+    const dataFolderPath = process.env.PUBLIC_URL + '/data/';
 
     let projects = props.projects.map((project, index) =>
-        <li>
+        <div className="project-thumb">
             <Link to={"/" + project.id}>
-                <Button variant="light">{project.name}</Button>
+                <img src={dataFolderPath + '/projects/' + project.id + '/img/' + project.thumbnail} />
+                <p style={{ color: `${props.accentColor}` }}>{project.name}</p>
             </Link>
-        </li>
+        </div>
     );
 
+
     return (
-        <div class="projects">
-            <h3>Projects</h3>
-            <ul class="projects-list">
+        <div id="projects" class="projects">
+            <h2 className="text-light">Projects</h2>
+            <hr />
+            <div class="projects-list text-light">
                 {projects}
-            </ul>
+            </div>
+            
         </div>
     );
 };

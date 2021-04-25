@@ -1,15 +1,11 @@
 
+import Logo from './logo'; 
 
-const Header = () => {
+const Header = (props) => {
 
     return (
-        <div class="header">
-            <img 
-                src={process.env.PUBLIC_URL + '/data/img/banner.jpg'}
-                width="100%" 
-                alt=""
-            />
-
+        <div class="header" style={{ backgroundImage: `url(${props.headerSource})`, borderBottom: `1em solid ${props.accentColor}` }}>
+            <Logo source={props.logoSource} />
         </div>
     );
 };
